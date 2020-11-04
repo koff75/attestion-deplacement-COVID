@@ -30,14 +30,16 @@ Note: the delay button is used to reduce the time by 15 minutes, 30 minutes or n
 Go to register on https://locationiq.com/ and get your **API KEY**
 Then open ./static/app.js file and fill the first line : `const API_KEY = "YOUR_API_KEY";`
 ## Step 2
+Create a directory `mkdir pdf`
 Execute npm install to install the **node_modules**
+Execute `npm install --save express && npm i morgan --save && npm i ejs --save
+
 ## Step 3
 Because your need to be **https** to run the geolocalization, you have to generate your own certificates:
 
     sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ./server.key -out server.cert
 
 ## Step 4
-Create a directory `mkdir pdf`.
 Install pm2 by executing `npm -g i pm2` (or with favorite tool, brew, etc.)
 Then your can start the program by 2 ways:
 --> `node nico.js`
