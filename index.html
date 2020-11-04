@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.css" />
+  <style>
+    .container {
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    #locator-input-section {
+      width: 100%;
+      margin: 10px;
+      max-width: 600px;
+    }
+
+    #popup_content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #input {
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="ui top attached label">Welcome to the COVID-19 french authorization generator made with ❤️ by koff75!
+  </div>
+
+  <section class="container">
+    <div class="ui large buttons">
+      <button id="btn_addMe" onclick="btn_addMe_fct()" class="ui green button">Add</button>
+      <div class="or"></div>
+      <button id="btn_removeMe" onclick="btn_removeMe_fct()" class="ui red button">Remove</button>
+    </div>
+    <h3 class="ui header">Select a time delay:</h3>
+    <div class="ui buttons">
+      <button id="btn_now" class="ui button">Now</button>
+      <button id="btn_15" class="ui button">-15 min</button>
+      <button id="btn_30" class="ui button">-30 min</button>
+    </div>
+    <h3 class="ui header">Leave it empty or write an address or use the geoloc (right button) :</h3>
+    <div class="ui icon big input" id="locator-input-section">
+      <input type="text" placeholder="Enter Your Address" id="autocomplete" />
+      <i aria-hidden="true" class="dot circle outline link icon" id="locator-button"></i>
+    </div>
+    <button onclick="generate_btn_fct()" id="generate_btn" class="ui right labeled icon button massive orange">
+      <i class="right arrow icon"></i>
+      Generate PDF
+    </button>
+
+    <div id="result" style="display:none; margin: 10px;" class="ui animated button" tabindex="0">
+      <div class="visible content">Download</div>
+      <div onclick="location.href='/file';" class="hidden content">
+        <i class="right download icon"></i>
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="ui modal">
+      <i class="close icon"></i>
+      <div class="header">
+        Fill your personnal informations
+      </div>
+      <div class="content">
+        <div id="input">
+          <div id="popup_content" class="description">
+            <div id="input">
+              <div class="ui right pointing label">
+                First name
+              </div>
+              <div class="ui input">
+                <input id="firstname" type="text" placeholder="Jacques">
+              </div>
+            </div>
+          </div>
+          <div id="input">
+            <div class="ui right pointing label">
+              Last name
+            </div>
+            <div class="ui input">
+              <input id="lastname" type="text" placeholder="Dupond">
+            </div>
+          </div>
+          <div id="input">
+            <div class="ui right pointing label">
+              Birthday
+            </div>
+            <div class="ui input">
+              <input id="birthday" type="date" placeholder="01/01/1992">
+            </div>
+          </div>
+          <div id="input">
+            <div class="ui right pointing label">
+              Place of birth
+            </div>
+            <div class="ui input">
+              <input id="placeofbirth" type="text" placeholder="Rodez">
+            </div>
+          </div>
+          <div id="input">
+            <div class="ui right pointing label">
+              Address
+            </div>
+            <div class="ui input">
+              <input id="address" type="text" placeholder="12 rue des Arts">
+            </div>
+          </div>
+          <div id="input">
+            <div class="ui right pointing label">
+              City
+            </div>
+            <div class="ui input">
+              <input id="city" type="text" placeholder="Paris">
+            </div>
+          </div>
+          <div id="input">
+            <div class="ui right pointing label">
+              Zip code
+            </div>
+            <div class="ui input">
+              <input id="zipcode" type="text" placeholder="75001">
+            </div>
+          </div>
+          <p>These informations are stored on your browser and not on our server :)</p>
+        </div>
+      </div>
+      <div class="actions">
+        <div class="ui black deny button">
+          Nope
+        </div>
+        <div onclick="UserDone_btn_fct()" class="ui positive right labeled icon button">
+          Done
+          <i class="checkmark icon"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="  https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCciUyORwwjPg1Xky43weCH7luSYOt0UZo&libraries=places">
+</script>
+<script src="app.js"></script>
+
+</html>
