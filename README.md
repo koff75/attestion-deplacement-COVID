@@ -37,6 +37,7 @@ Because your need to be **https** to run the geolocalization, you have to genera
     sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ./server.key -out server.cert
 
 ## Step 4
+Create a directory `mkdir pdf`.
 Install pm2 by executing `npm -g i pm2` (or with favorite tool, brew, etc.)
 Then your can start the program by 2 ways:
 --> `node nico.js`
