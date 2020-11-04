@@ -10,7 +10,7 @@ All information are set in the browser local memory, nothing on server :)
 When the website start, it fetch the local storage automaticaly.
 If you want for some reason change the local information, just click on the red "Remove" button !
 
-<img src="/Example%201.png" width="350">
+<img src="/Example%201.png" width="450">
 
 If it's the first time, you juste have to click on the green "Add" button, and fill the informations:
 
