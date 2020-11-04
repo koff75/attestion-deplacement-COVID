@@ -32,7 +32,7 @@ Then open ./static/app.js file and fill the first line : `const API_KEY = "YOUR_
 ## Step 2
 Create a directory `mkdir pdf`
 Execute npm install to install the **node_modules**
-Execute `npm install --save express && npm i morgan --save && npm i ejs --save
+Execute `npm install --save express && npm i morgan --save && npm i ejs --save`
 
 ## Step 3
 Because your need to be **https** to run the geolocalization, you have to generate your own certificates:
