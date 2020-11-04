@@ -3,7 +3,29 @@
 
 Checkout the **video** for a quick example:
 https://youtu.be/vbKlCVfm-9U
-![enter image description here](d)
+
+## Features:
+All information are set in the browser local memory, nothing on server :)
+
+When the website start, it fetch the local storage automaticaly.
+If you want for some reason change the local information, just click on the red "Remove" button !
+
+<img src="/Example%201.png" width="300">
+
+If it's the first time, you juste have to click on the green "Add" button, and fill the informations:
+
+<img src="/Example%202.png" width="300">
+
+Your information are set, but you just want to change de location, it's easy, click on right input button, and the browser ask you to use location detection:
+
+<img src="/Example%203.png" width="300">
+
+Then, the input is set with your current location, but feel free to change if you need !
+
+<img src="/Example%204.png" width="300">
+
+Note: the delay button is used to reduce the time by 15 minutes, 30 minutes or nothing :)!
+
 ## Step 1
 Go to register on https://locationiq.com/ and get your **API KEY**
 Then open ./static/app.js file and fill the first line : `const API_KEY = "YOUR_API_KEY";`
